@@ -110,4 +110,9 @@ class FirebaseAuth {
       String email, String emailLinkUrl) {
     return emailLink.signInWithEmailLink(email, emailLinkUrl);
   }
+
+  Future<void> sendPasswordResetEmail(
+      String email, ActionCodeSettings settings) {
+    return emailPassword.sendPasswordResetEmail(email, settings);
+  }
 }
